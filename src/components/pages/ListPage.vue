@@ -3,7 +3,7 @@
   <!-- <iframe ref="iframe" v-if="showAd" src="/ad" height="1" width="1" scrolling="no" frameborder="0"></iframe> -->
   <Promotion v-if="showPromo" @close="closedPromo()" />
   <div>
-    <ul>
+    <ul data-test="coffee-list">
       <li v-for="coffee in list" :key="coffee.name">
         <h4 @dblclick="translate(coffee.name)">
           {{ coffee.isTranslated? translation[coffee.name] : coffee.name }}
